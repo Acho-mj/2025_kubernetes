@@ -1,0 +1,9 @@
+dependencies:
+- name: grafana
+  repository: https://grafana.github.io/helm-charts
+  version: 10.1.4
+- name: airflow
+  repository: https://airflow.apache.org
+  version: 1.18.0
+digest: sha256:760d050a8c84904a228cff5cef60c345d59fa2bfac0d5431d8119e2999f43317
+generated: "2025-11-05T16:05:34.708766+09:00"

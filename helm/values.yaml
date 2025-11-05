@@ -107,3 +107,21 @@ frontend:
       # frontend.resources.limits.cpu는 각 프론트엔드 Pod에 허용되는 최대 CPU 양
       cpu: "200m"
 
+# 공식 Helm 차트 서브차트 설정
+# Grafana
+grafana:
+  enabled: true
+  adminUser: admin
+  adminPassword: admin
+  service:
+    type: NodePort
+
+# Airflow
+airflow:
+  enabled: true
+  defaultAirflowRepository: apache/airflow
+  defaultAirflowTag: "2.8.0"
+  webserver:
+    service:
+      type: NodePort
+

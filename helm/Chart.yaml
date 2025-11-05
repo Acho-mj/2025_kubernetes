@@ -5,3 +5,16 @@ type: application
 version: 0.1.0
 appVersion: "1.0.0"
 
+# 공식 Helm 차트
+dependencies:
+  # Grafana
+  - name: grafana
+    version: 10.1.4
+    repository: https://grafana.github.io/helm-charts
+    condition: grafana.enabled
+  
+  # Airflow
+  - name: airflow
+    version: 1.18.0
+    repository: https://airflow.apache.org
+    condition: airflow.enabled
